@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* nav */
+nav {
+  width: 100%;
+  padding: 20px 8px;
+  font-size: 13px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+/* .navIcon */
+.navIcon {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.navIcon-a {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+.navIcon-a svg {
+  width: 100%;
+}
+.navIcon-a::before {
+  content: attr(aria-label);
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  /* 글 줄 바꿈 방지 */
+  white-space: nowrap;
+  font-size: 12px;
+  border-radius: 3px;
+  background-color: #222;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1s;
+}
+.navIcon-a::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  display: block;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: all 0.5s;
+}
+#mail {
+  padding-top: 2px;
+}
+/* nav 호버 */
+nav > a:hover {
+  text-decoration: underline;
+}
+.navIcon-a:hover::before,
+.navIcon-a:hover::after,
+.navIcon-a:hover {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 로그인 */
+#login {
+  padding: 3px 12px;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  background-color: #4484f3;
+}
+
+/* main */
+.main-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 171px;
+}
+/* 로고 */
+.g-logo {
+    /* mask-image : 모양만 남고 색으로 채워짐 (이미지는 안보임) */
+  mask-image: url("../images/google_logo.svg");
+  width: 272px;
+  height: 92px;
+  background-color: #ff5072;
+}
