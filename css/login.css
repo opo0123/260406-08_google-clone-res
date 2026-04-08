@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+/* 아이콘 공통 설정 */
+i {
+  color: #777;
+  display: block;
+}
+
+/* 전체 영역 */
+.container {
+    width: 50%;
+    max-width: 350px;
+    min-width: 300px;
+    margin: 150px auto;
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0px 2px 4px #ddd;
+    border-radius: 10px;
+}
+
+/* 버튼 전체 */
+button {
+    width: 100%;
+    padding: 8px;
+    border: 0;
+    border-radius: 3px;
+}
+button:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
+button img {
+    width: 24px;
+}
+
+/* 폼 */
+form {
+    width: 100%;
+}
+
+/* 아이디, 비밀번호 */
+.input-gr {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+.input-gr input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c6c6c6;
+    border-radius: 3px;
+    outline: none ;
+}
+.input-gr input::placeholder {
+    color: #c6c6c6;
+}
+
+/* 로그인 버튼 (속성으로 선택) */
+button[type="submit"]{
+    font-size: 18px;
+    color: #fff;
+    background-color: #6294ff;
+}
+
+/* 소셜 (other) 로그인 */
+#otherLogin {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background-color: #ededed;
+    color: #555;
+}

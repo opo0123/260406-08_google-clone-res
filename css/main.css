@@ -101,7 +101,7 @@ nav > a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 38px;
+  gap: 50px;
   padding-top: 171px;
 }
 /* 로고 */
@@ -226,12 +226,19 @@ nav > a:hover {
   width: 100%;
   max-width: 1000px;
   min-width: 250px;
-  background-color: #b5b3ee;
+  /* background-color: #b5b3ee; */
 }
 .search-plus ul {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.search-plus li {
+  position: relative;
+  /* width: calc((100% - 40px) / 5); */
+  /* flex: 1; */
 }
 .roundBox {
   position: relative;
@@ -257,4 +264,77 @@ nav > a:hover {
 }
 #chat {
   width: 150%;
+}
+
+/* 바로가기 추가 버튼 */
+#plus {
+  position: relative;
+  background-color: #cee2ff;
+}
+#plus span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #123b88;
+  font-size: 30px;
+}
+.search-plus a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 110px;
+  height: 110px;
+  z-index: 99;
+}
+/* 더보기 */
+.more {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  opacity: 0;
+}
+.more img {
+  position: absolute;
+  top: 10px;
+  right: 2px;
+  opacity: 0;
+}
+/* 호버 */
+.search-plus li:hover .more {
+  opacity: 1;
+}
+.search-plus li:hover .more img {
+  opacity: 1;
+  transition: all 0.5s;
+  /* 0.5초 뒤에 나타남 */
+  transition-delay: 0.5s;
+}
+
+/* 검색버튼 */
+.search-btn {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.search-btn button {
+  border: 0;
+  padding: 5px 10px;
+  background-color: #f4f4f4;
+}
+.search-btn button:hover {
+  color: #333;
+  /* 입체적 */
+  background: linear-gradient(to bottom, #ffffff 0%, #f6f6f6 47%, #ededed 100%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }

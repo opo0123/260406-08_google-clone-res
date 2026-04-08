@@ -1,11 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>로그인 페이지</title>
-</head>
-<body>
-    로그인 페이지
-</body>
+    <!-- 폰트어썸 (아이콘) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- css -->
+     <link rel="stylesheet" href="css/login.css">
+  </head>
+  <body>
+    <!-- 전체 영역 -->
+    <div class="container">
+      <h2>로그인</h2>
+      <!-- 폼 -->
+      <form>
+        <!-- 아이디 -->
+        <div class="input-gr">
+          <label for="userId"
+            ><i class="fa-solid fa-user" style="color: rgb(0, 0, 0)"></i
+          ></label>
+          <input type="text" id="userId" placeholder="아이디를 입력하세요." />
+        </div>
+        <!-- 비밀번호 -->
+        <div class="input-gr">
+          <label for="userPw"
+            ><i class="fa-solid fa-lock" style="color: rgb(0, 0, 0)"></i
+          ></label>
+          <input type="text" id="userPw" placeholder="비밀번호를 입력하세요." />
+        </div>
+        <!-- 로그인 버튼 -->
+        <button type="submit">Login</button>
+      </form>
+      <!-- 구분 -->
+      <div class="or">or</div>
+      <!-- 소셜 (other) 로그인 -->
+        <button type="button" id="otherLogin">
+        <img src="images/naver.png" alt="네이버로그인" />
+        <span>네이버로 로그인하기</span>
+      </button>
+      <button type="button" id="otherLogin" >
+        <img
+          src="images/googleg_standard_color_128dp.png"
+          alt="구글로그인"
+        />
+        <span>구글로 로그인하기</span>
+      </button>
+      <!-- 공지 사항 -->
+       <button onclick="window.open('notice.html')">공지사항</button>
+  </body>
 </html>
